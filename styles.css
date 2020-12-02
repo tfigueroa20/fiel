@@ -1,351 +1,273 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Barlow', sans-serif;
-        background-color: white;
-    }
-    /*HEADER*/
-    
-    .contenedor {
-        background-color: white;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        position: relative;
-    }
-    
-    header {
-        background-color: white;
-        height: 80px;
-        display: flex;
-        flex-basis: 100%;
-        align-items: center;
-        margin-top: 10px;
-        justify-content: space-between;
-        font-size: 1.4rem;
-    }
-    
-    .logo {}
-    
-    header .logo img {
-        width: 75px;
-        margin-left: 30px;
-        margin-top: -17px;
-    }
-    
-    #deditos {
-        margin-top: -15px;
-    }
-    
-    header nav {
-        list-style: none;
-        text-decoration: none;
-        display: flex;
-    }
-    
-    header nav li {
-        display: flex;
-        justify-self: right;
-    }
-    
-    header nav li a {
-        text-decoration: none;
-        color: black;
-        padding: 10px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    
-    header nav li :hover {
-        color: rgba(248, 211, 2, 0.726);
-        text-decoration: none;
-    }
-    
-    @media only screen and (min-width: 750px) {
-        .hamburguesa {
-            display: none;
-        }
-        .menumobile {
-            display: none;
-        }
-    }
-    
-    @media only screen and (max-width: 750px) {
-        .menuweb {
-            display: none;
-        }
-        .hamburguesa {
-            padding: 20px;
-            margin-top: -9px;
-        }
-        .mobile {
-            display: none;
-            position: absolute;
-            top: 90%;
-            right: 0;
-            background-color: white;
+        * {
+            margin: 0;
             padding: 0;
-            z-index: 100;
+            box-sizing: border-box;
         }
-        .menumobile {
-            padding-right: 22px;
-        }
-        .hamburguesa:focus~.mobile {
-            display: block;
+        
+        body {
+            font-family: 'Barlow', sans-serif;
             background-color: white;
         }
-    }
-    /*VIDEO*/
-    
-    .section {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    .section img {
-        padding: 20px;
-        margin: 20px;
-        z-index: 1;
-        opacity: 0.8;
-    }
-    
-    .color-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: black;
-        width: 100%;
-        height: 100%;
-        opacity: 0.4;
-    }
-    
-    #Video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: -1;
-    }
-    
-    @media only screen and (max-width: 1120px) {
-        video {
-            display: none
+        /*HEADER*/
+        
+        .logo {
+            padding: 3px;
         }
+        
+        .active {
+            font-weight: 500;
+        }
+        
+        .nav-item {
+            font-size: 130%;
+        }
+        /*VIDEO*/
+        
         .section {
-            background-image: url(https://images.unsplash.com/photo-1545287072-469f3761413c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
-            background-position-x: center;
-            background-position-y: center;
-        }
-        .color-overlay {
-            opacity: 0.78;
-        }
-        .section img {
-            padding: 50px;
-        }
-    }
-    
-    @media only screen and (max-width: 690px) {}
-    /*NOSOTROS*/
-    
-    .fondosParrafos {
-        background-position: center;
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-    
-    .parrafo {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-content: center;
-        justify-content: center;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        text-transform: uppercase;
-    }
-    
-    #nosotros {
-        margin: 40px;
-    }
-    
-    #logo2 {
-        z-index: 1;
-        width: 350px;
-        align-self: center;
-        filter: invert(100%);
-        margin-bottom: 1%;
-    }
-    /*ESTILOS*/
-    
-    #navpisado {
-        font-family: 'Barlow', sans-serif;
-        font-weight: normal;
-        font-size: 1.4rem;
-    }
-    
-    .row {
-        background-color: none;
-        margin-top: 30px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .titulos {
-        font-size: 1.4rem;
-        padding: 10px;
-    }
-    
-    .pe {
-        text-align: justify;
-    }
-    
-    #golden {
-        margin-top: 15px;
-    }
-    
-    #blackipa {
-        margin-top: 7px;
-    }
-    
-    #honey {
-        margin-top: -5px;
-    }
-    
-    #ipa {
-        margin-left: 60px;
-    }
-    
-    #todo {
-        margin-bottom: 100px;
-    }
-    /*VENTAS*/
-    
-    #nro {
-        font-weight: bold;
-        padding: 60px;
-    }
-    
-    .btn-whatsapp {
-        display: block;
-        width: 70px;
-        height: 70px;
-        color#fff;
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        border-radius: 50%;
-        line-height: 80px;
-        text-align: center;
-        z-index: 999;
-    }
-    /*Donde Estamos*/
-    
-    .grid-container {
-        display: grid;
-        grid-template-columns: 0.5fr 2.5fr 1fr 0.5fr;
-        grid-template-rows: 1fr 1.5fr 1fr;
-        gap: 0px 0px;
-        grid-template-areas: ". Dodne-estamos Dodne-estamos ." ". Mapa Bares ." ". . . .";
-    }
-    
-    .Dodne-estamos {
-        grid-area: Dodne-estamos;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-        margin-top: 5%;
-    }
-    
-    .Mapa {
-        grid-area: Mapa;
-    }
-    
-    .Bares {
-        grid-area: Bares;
-        padding-left: 15px;
-    }
-    
-    .lugares {
-        list-style: none;
-    }
-    
-    .lugaresbares {
-        list-style: none;
-        text-decoration: none;
-        color: black;
-    }
-    
-    .lugaresbares :hover {
-        color: darkorange;
-    }
-    
-    #deditosgrande {
-        display: none
-    }
-    
-    #deditosgrande2 {
-        display: none;
-    }
-    
-    @media only screen and (max-width: 900px) {
-        .mapita {
-            display: none;
-        }
-        #deditosgrande {
+            position: relative;
+            width: 100%;
+            height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        .Bares {
+        
+        .section img {
+            padding: 20px;
+            margin: 20px;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        
+        .color-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        
+        #Video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        
+        @media only screen and (max-width: 1120px) {
+            video {
+                display: none
+            }
+            .section {
+                background-image: url(https://images.unsplash.com/photo-1545287072-469f3761413c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
+                background-position-x: center;
+                background-position-y: center;
+            }
+            .color-overlay {
+                opacity: 0.78;
+            }
+            .section img {
+                padding: 50px;
+            }
+        }
+        
+        @media only screen and (max-width: 690px) {}
+        /*NOSOTROS*/
+        
+        .fondosParrafos {
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        
+        .parrafo {
             display: flex;
             flex-direction: column;
-            justify-content: left;
-            margin-top: 34px;
-            margin-left: -20px;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-transform: uppercase;
         }
-        #deditosgrande2 {
-            display: none;
+        
+        #nosotros {
+            margin: 40px;
         }
-    }
-    
-    @media only screen and (max-width: 380px) {
-        .mapita {
-            display: none;
+        
+        #logo2 {
+            z-index: 1;
+            width: 350px;
+            align-self: center;
+            filter: invert(100%);
+            margin-bottom: 1%;
         }
-        #deditosgrande {
-            display: none;
+        /*ESTILOS*/
+        
+        #navpisado {
+            font-family: 'Barlow', sans-serif;
+            font-weight: normal;
+            font-size: 1.4rem;
         }
-        .Bares {
+        
+        .row {
+            background-color: none;
+            margin-top: 30px;
+            text-align: center;
             display: flex;
-            flex-direction: column;
-            justify-content: left;
-            padding-right: 15vh;
-            text-align: center;
-            padding-bottom: 30px;
-        }
-        .Dodne-estamos {
-            margin-top: 25%;
-            text-align: center;
             justify-content: center;
         }
-        #deditosgrande2 {
+        
+        .titulos {
+            font-size: 1.4rem;
+            padding: 10px;
+        }
+        
+        .pe {
+            text-align: justify;
+        }
+        
+        #golden {
+            margin-top: 15px;
+        }
+        
+        #blackipa {
+            margin-top: 7px;
+        }
+        
+        #honey {
+            margin-top: -5px;
+        }
+        
+        #ipa {
+            margin-left: 60px;
+        }
+        
+        #todo {
+            margin-bottom: 100px;
+        }
+        /*VENTAS*/
+        
+        #nro {
+            font-weight: bold;
+            padding: 60px;
+        }
+        
+        .btn-whatsapp {
+            display: block;
+            width: 70px;
+            height: 70px;
+            color#fff;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 50%;
+            line-height: 80px;
+            text-align: center;
+            z-index: 999;
+        }
+        /*Donde Estamos*/
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.5fr 2.5fr 1fr 0.5fr;
+            grid-template-rows: 1fr 1.5fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas: ". Dodne-estamos Dodne-estamos ." ". Mapa Bares ." ". . . .";
+        }
+        
+        .Dodne-estamos {
+            grid-area: Dodne-estamos;
             display: flex;
             flex-direction: row;
-            align-items: center;
-            margin-top: -50%;
-            padding-left: 19%;
+            align-content: center;
+            justify-content: center;
+            margin-top: 5%;
         }
-    }
-    /*FOOTER*/
+        
+        .Mapa {
+            grid-area: Mapa;
+        }
+        
+        .Bares {
+            grid-area: Bares;
+            padding-left: 15px;
+        }
+        
+        .lugares {
+            list-style: none;
+        }
+        
+        .lugaresbares {
+            list-style: none;
+            text-decoration: none;
+            color: black;
+        }
+        
+        li :hover {
+            color: rgba(248, 211, 2, 0.726);
+            text-decoration: none
+        }
+        
+        #deditosgrande {
+            display: none
+        }
+        
+        #deditosgrande2 {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .mapita {
+                display: none;
+            }
+            #deditosgrande {
+                display: flex;
+                align-items: center;
+            }
+            .Bares {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                margin-top: 34px;
+                margin-left: -20px;
+            }
+            #deditosgrande2 {
+                display: none;
+            }
+        }
+        
+        @media only screen and (max-width: 380px) {
+            .mapita {
+                display: none;
+            }
+            #deditosgrande {
+                display: none;
+            }
+            .Bares {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                padding-right: 15vh;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+            .Dodne-estamos {
+                margin-top: 25%;
+                text-align: center;
+                justify-content: center;
+            }
+            #deditosgrande2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: -50%;
+                padding-left: 19%;
+            }
+        }
+        /*FOOTER*/
